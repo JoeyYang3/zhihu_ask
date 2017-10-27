@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "知乎发帖",
+    "version": "1.0",
+    "description": "知乎发帖",
+    "browser_action": {
+        "default_icon": "1.png",        
+        "default_title": "知乎发帖"
+
+    },
+"permissions": [
+    "tabs", "http://*/*","https://*/*","storage"
+],
+"content_scripts": [ 
+    { 
+        "matches": ["https://www.zhihu.com/"], 
+        "js": ["jquery.js","myscript2.js"] 
+    } ,
+    {
+        "matches":["https://www.zhihu.com/question/*"],
+        "js": ["jquery.js","myscript3.js"] 
+    }
+] 
+}
